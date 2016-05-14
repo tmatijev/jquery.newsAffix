@@ -87,8 +87,7 @@
         var that = this;
         
         var myEfficientFn = this.helperDebounce(function() {
-            var resolution = that.getCurrentResolution();
-            that.checkResponsiveState(resolution);
+            that.checkResponsiveState(that.getCurrentResolution());
         }, 250);
 
         window.addEventListener('resize', myEfficientFn);
@@ -121,18 +120,10 @@
     };
     
     Plugin.prototype.toggleNewsAffix = function () {
-        /**
-         * @TODO: Return false if is active but
-         * else must exist to hide sidebar again
-         */
-        
         if( this.getScrollTopOnLoad() > this.headers[1].start ) {
             this.$affix.addClass('active');
-            // this.isAffixActive = true;
         } else {
-            // console.log("yea");
             this.$affix.removeClass('active');
-            // this.isAffixActive = false;
         }
     };
     
@@ -140,16 +131,12 @@
         var $wrapper = $(this.options.headerWrapper);
         var naItems = $wrapper.find('[data-na-header]');
         
-        /**
-         * @TODO: Better logic
-         */
-        
         for( var i = 0; i < naItems.length; i++ ) {
             this.headers[i + 1] = {
                 start: $(naItems[i]).offset().top
             };
             
-            if( i + 1 === 6 ) {
+            if( i + 1 === naItems.length ) {
                 var chapterHeight = $(naItems[i]).parent().height();
                 var chapterEnd = parseInt($(window).height() - chapterHeight, 10);
                 var final = chapterHeight + $(naItems[i]).offset().top;
