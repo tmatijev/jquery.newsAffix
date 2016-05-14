@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'boostrap-sass' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of /Users/Matas/Sites/github-tmatijev/news-scroller/package.json
+5 warn package.json nasbnation@ No description
+6 warn package.json nasbnation@ No repository field.
+7 warn package.json nasbnation@ No README data
+8 warn package.json nasbnation@ No license field.
+9 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/bootstrap/package.json
+10 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/gulp/package.json
+11 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/gulp-cache/package.json
+12 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/gulp-rename/package.json
+13 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/gulp-ruby-sass/package.json
+14 verbose installManyTop reading scoped package data from /Users/Matas/Sites/github-tmatijev/news-scroller/node_modules/gulp-uglify/package.json
+15 info package.json gulp-rename@1.2.2 No license field.
+16 verbose readDependencies loading dependencies from /Users/Matas/Sites/github-tmatijev/news-scroller/package.json
+17 silly cache add args [ 'boostrap-sass', null ]
+18 verbose cache add spec boostrap-sass
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'boostrap-sass',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'boostrap-sass',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: 'latest',
+19 silly cache add   type: 'tag' }
+20 silly addNamed boostrap-sass@latest
+21 verbose addNamed "latest" is being treated as a dist-tag for boostrap-sass
+22 info addNameTag [ 'boostrap-sass', 'latest' ]
+23 silly mapToRegistry name boostrap-sass
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'boostrap-sass',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'boostrap-sass',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/boostrap-sass
+28 verbose addNameTag registry:https://registry.npmjs.org/boostrap-sass not in flight; fetching
+29 verbose request uri https://registry.npmjs.org/boostrap-sass
+30 verbose request no auth needed
+31 info attempt registry request try #1 at 12:08:34 PM
+32 verbose request id 891835a4df778d35
+33 http request GET https://registry.npmjs.org/boostrap-sass
+34 http 404 https://registry.npmjs.org/boostrap-sass
+35 verbose headers { 'content-type': 'application/json',
+35 verbose headers   'cache-control': 'max-age=0',
+35 verbose headers   'content-length': '2',
+35 verbose headers   'accept-ranges': 'bytes',
+35 verbose headers   date: 'Thu, 12 May 2016 10:08:35 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   age: '0',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+35 verbose headers   'x-cache': 'MISS',
+35 verbose headers   'x-cache-hits': '0',
+35 verbose headers   'x-timer': 'S1463047714.624249,VS0,VE439',
+35 verbose headers   vary: 'Accept-Encoding' }
+36 silly get cb [ 404,
+36 silly get   { 'content-type': 'application/json',
+36 silly get     'cache-control': 'max-age=0',
+36 silly get     'content-length': '2',
+36 silly get     'accept-ranges': 'bytes',
+36 silly get     date: 'Thu, 12 May 2016 10:08:35 GMT',
+36 silly get     via: '1.1 varnish',
+36 silly get     age: '0',
+36 silly get     connection: 'keep-alive',
+36 silly get     'x-served-by': 'cache-fra1245-FRA',
+36 silly get     'x-cache': 'MISS',
+36 silly get     'x-cache-hits': '0',
+36 silly get     'x-timer': 'S1463047714.624249,VS0,VE439',
+36 silly get     vary: 'Accept-Encoding' } ]
+37 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/boostrap-sass
+37 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+37 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+37 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+37 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+37 verbose stack     at emitTwo (events.js:87:13)
+37 verbose stack     at Request.emit (events.js:172:7)
+37 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+37 verbose stack     at emitOne (events.js:82:20)
+37 verbose stack     at Request.emit (events.js:169:7)
+37 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+38 verbose statusCode 404
+39 verbose pkgid boostrap-sass
+40 verbose cwd /Users/Matas/Sites/github-tmatijev/news-scroller
+41 error Darwin 15.4.0
+42 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "boostrap-sass"
+43 error node v4.4.3
+44 error npm  v2.15.1
+45 error code E404
+46 error 404 Registry returned 404 for GET on https://registry.npmjs.org/boostrap-sass
+46 error 404
+46 error 404 'boostrap-sass' is not in the npm registry.
+46 error 404 You should bug the author to publish it (or use the name yourself!)
+46 error 404 It was specified as a dependency of 'nasbnation'
+46 error 404
+46 error 404 Note that you can also install from a
+46 error 404 tarball, folder, http url, or git url.
+47 verbose exit [ 1, true ]

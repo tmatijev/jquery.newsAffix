@@ -1,0 +1,10 @@
+{
+    "name": "nasbnation",
+    "dependencies": {
+        "gulp": "latest",
+        "gulp-uglify": "latest",
+        "gulp-rename": "latest",
+        "gulp-cache": "latest",
+        "gulp-ruby-sass": "latest"
+    }
+}
