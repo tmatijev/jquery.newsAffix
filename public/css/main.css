@@ -1,0 +1,85 @@
+body {
+  font-size: 16px; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 26px; }
+
+.content__section {
+  background-color: #f5f5f5; }
+
+.news-affix {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  width: 280px;
+  left: -280px;
+  transition: 0.3s ease-in-out; }
+  .news-affix__items {
+    margin: 0;
+    padding: 0;
+    background-color: #333; }
+  .news-affix__action {
+    display: block;
+    color: #fff;
+    padding: 15px 10px; }
+    .news-affix__action:hover {
+      text-decoration: none;
+      color: #e6e6e6;
+      background-color: #1a1a1a; }
+  .news-affix__item {
+    position: relative;
+    overflow: hidden; }
+    .news-affix__item.active .news-affix__action {
+      background-color: #2980b9; }
+    .news-affix__item.active .news-affix__bar {
+      position: absolute;
+      z-index: 10;
+      background: #226998;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0; }
+    .news-affix__item.completed {
+      opacity: .2; }
+  .news-affix__chapter {
+    margin: 0;
+    position: relative;
+    z-index: 20; }
+  .news-affix__title {
+    margin: 0;
+    position: relative;
+    z-index: 20; }
+  .news-affix__bar-inverse {
+    display: none; }
+  .news-affix.active {
+    left: 0; }
+  .news-affix.lower {
+    width: 60px;
+    left: -60px; }
+    .news-affix.lower.active {
+      left: 0; }
+    .news-affix.lower .news-affix__bar,
+    .news-affix.lower .news-affix__chapter-text,
+    .news-affix.lower .news-affix__title {
+      display: none; }
+    .news-affix.lower .news-affix__item {
+      position: relative;
+      overflow: hidden; }
+      .news-affix.lower .news-affix__item.active .news-affix__action {
+        background-color: #2980b9; }
+      .news-affix.lower .news-affix__item.active .news-affix__bar-inverse {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background: #226998;
+        top: 0;
+        left: 0;
+        width: 100%; }
+    .news-affix.lower .news-affix__action {
+      text-align: center; }
