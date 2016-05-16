@@ -17,6 +17,8 @@
                 cssRule: 'width'
             }
         },
+        onClickElements: '.js-affix-click',
+        scrollAnimationSpeed: 750,
         breakPoint: 1250
     };
     
@@ -46,6 +48,7 @@
         this.toggleNewsAffix();
         this.onResizeEvent();
         this.checkResponsiveState();
+        this.onClickScrollEvent();
     };
     
     Plugin.prototype.setScrollHandler = function () {
@@ -206,6 +209,21 @@
         for( var i = 0; i < currentIndex - 1; i++ ) {
             this._$sidebar.find('.news-affix__item').eq(i).addClass('completed');
         }
+    };
+    
+    Plugin.prototype.onClickScrollEvent = function () {
+        var that = this;
+        
+        $(this.options.newsAffixSel).on('click', this.options.onClickElements, function (e) {
+            e.preventDefault();
+            
+            var clickedIndex    = $(this).parent().data('na-side');
+            var $header         = $('*[data-na-header="' + clickedIndex + '"]');
+            
+            $('html, body').animate({
+                scrollTop: $header.offset().top + 1
+            }, that.options.scrollAnimationSpeed);
+        });
     };
     
     Plugin.prototype.setNewsAffixPosition = function () {

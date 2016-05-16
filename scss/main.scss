@@ -59,7 +59,9 @@ h3 {
         color: $color-white;
         padding: 15px 10px;
         
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             text-decoration: none;
             color: darken($color-white, 10%);
             background-color: darken($color-sidebar-bg, 10%);

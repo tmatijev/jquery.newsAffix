@@ -28,7 +28,9 @@ h3 {
     display: block;
     color: #fff;
     padding: 15px 10px; }
-    .news-affix__action:hover {
+    .news-affix__action:hover,
+    .news-affix__action:focus,
+    .news-affix__action:active {
       text-decoration: none;
       color: #e6e6e6;
       background-color: #1a1a1a; }
