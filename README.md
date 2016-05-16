@@ -20,6 +20,8 @@ $(function () {
                 cssRule: 'width'
             }
         },
+        onClickElements: '.js-affix-click',
+        scrollAnimationSpeed: 750,
         breakPoint: 1250
     });
 });
