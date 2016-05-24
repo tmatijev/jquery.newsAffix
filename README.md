@@ -1,6 +1,6 @@
 # jquery.newsAffix
 
-Demo is located [here](http://tmatijev.github.io/jquery.newsAffix/)
+.Demo is located [here](http://tmatijev.github.io/jquery.newsAffix/)
 
 ## Init example (default values) ##
 ```javascript
