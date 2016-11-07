@@ -1,0 +1,9 @@
+{
+  "name": "news-affix",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  }
+}

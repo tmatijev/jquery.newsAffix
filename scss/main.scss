@@ -40,25 +40,25 @@ h3 {
 //// News affix
 .news-affix {
     $root: &;
-    
+
     position: fixed;
     left: 0;
     top: 50px;
     width: 280px;
     left: -280px;
     transition: 0.3s ease-in-out;
-    
+
     @include e('items') {
         margin: 0;
         padding: 0;
         background-color: $color-sidebar-bg;
     }
-    
+
     @include e('action') {
         display: block;
         color: $color-white;
         padding: 15px 10px;
-        
+
         &:hover,
         &:focus,
         &:active {
@@ -67,16 +67,16 @@ h3 {
             background-color: darken($color-sidebar-bg, 10%);
         }
     }
-    
+
     @include e('item') {
         position: relative;
         overflow: hidden;
-        
+
         &.active {
             #{$root}__action {
                 background-color: $color-action;
             }
-            
+
             #{$root}__bar {
                 position: absolute;
                 z-index: 10;
@@ -87,55 +87,55 @@ h3 {
                 width: 0;
             }
         }
-        
+
         &.completed {
             opacity: .2;
         }
     }
-    
+
     @include e('chapter') {
         margin: 0;
         position: relative;
         z-index: 20;
     }
-    
+
     @include e('title') {
         margin: 0;
         position: relative;
         z-index: 20;
     }
-    
+
     @include e('bar-inverse') {
         display: none;
     }
-    
+
     &.active {
         left: 0;
     }
-    
+
     &.lower {
         width: 60px;
         left: -60px;
-        
+
         &.active {
             left: 0;
         }
-    
+
         #{$root}__bar,
         #{$root}__chapter-text,
         #{$root}__title {
             display: none;
         }
-        
+
         #{$root}__item {
             position: relative;
             overflow: hidden;
-            
+
             &.active {
                 #{$root}__action {
                     background-color: $color-action;
                 }
-                
+
                 #{$root}__bar-inverse {
                     display: block;
                     position: absolute;
@@ -147,7 +147,7 @@ h3 {
                 }
             }
         }
-        
+
         #{$root}__action {
             text-align: center;
         }
