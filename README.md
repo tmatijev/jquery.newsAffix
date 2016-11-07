@@ -28,3 +28,13 @@ $(function () {
     });
 });
 ```
+
+## Options ##
+* `headerWrapper` - main header wrapper which contains chapters. Chapters should be direct childs of the main targeted wrapper.
+* `headerClass` - header title of each chapter
+* `sidebar` - affix sidebar class name
+* `newsAffixSel` - main news affix selector
+* `setAffixClasses / lower & higher / cssClass` - CSS class for news affix currently active item. `lower` is used for affix under defined `breakpoint` option and `higher` for upper. `cssRule` is used should affix item calculate `width` or `height` on the current element (high = width, low = height).
+* `onClickElement` - element which will trigger on scroll event
+* `scrollAnimationSpeed` - speed of animation
+* `breakpoint` - breakpoint for mobile / desktop
