@@ -8,18 +8,11 @@
         sidebar: ".js-news-affix-items",
         newsAffixSel: ".js-news-affix",
         setAffixClasses: {
-            lower: {
-                cssClass: '.news-affix__bar-inverse',
-                cssRule: 'height'
-            },
-            higher: {
-                cssClass: '.news-affix__bar',
-                cssRule: 'width'
-            }
+            cssClass: '.news-affix__bar',
+            cssRule: 'width'
         },
         onClickElements: '.js-affix-click',
-        scrollAnimationSpeed: 750,
-        breakPoint: 1250
+        scrollAnimationSpeed: 750
     };
 
     function Plugin( element, options ) {
@@ -98,22 +91,8 @@
 
     Plugin.prototype.checkResponsiveState = function (resolution) {
         resolution = resolution || this.getCurrentResolution();
-        affixClass = resolution < this.options.breakPoint ? ["lower", "higher"] : ["higher", "lower"];
 
-        this.setAffixClass(affixClass);
         this.setPercentageOfChapter();
-    };
-
-    Plugin.prototype.setAffixClass = function (affixClass) {
-        if( this.$affix.hasClass(affixClass[0]) ) {
-            return false;
-        }
-
-        this._affixStyle = affixClass[0];
-
-        this.$affix
-            .removeClass(affixClass[1])
-                .addClass(affixClass[0]);
     };
 
     Plugin.prototype.scrollHandler = function () {
@@ -187,8 +166,8 @@
         var step        = parseInt(this.headers[this._sidebarIndex].end - this.headers[this._sidebarIndex].start, 10);
         var current     = parseInt(this.getScrollTopOnLoad() - this.headers[this._sidebarIndex].start, 10);
         var percentage  = parseFloat(current / step * 100).toFixed(2) + '%';
-        var affixClass  = this.options.setAffixClasses[this._affixStyle].cssClass;
-        var affixRule   = this.options.setAffixClasses[this._affixStyle].cssRule;
+        var affixClass  = this.options.setAffixClasses.cssClass;
+        var affixRule   = this.options.setAffixClasses.cssRule;
 
         this._$sidebar
             .find('*[data-na-side="'+Number(this._sidebarIndex)+'"]')
