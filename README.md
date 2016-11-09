@@ -39,4 +39,3 @@ $(function () {
 * `setAffixClasses / lower & higher / cssClass` - CSS class for news affix currently active item. `lower` is used for affix under defined `breakpoint` option and `higher` for upper. `cssRule` is used should affix item calculate `width` or `height` on the current element (high = width, low = height).
 * `onClickElement` - element which will trigger on scroll event
 * `scrollAnimationSpeed` - speed of animation
-* `breakpoint` - breakpoint for mobile / desktop
