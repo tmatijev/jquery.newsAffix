@@ -15,14 +15,8 @@ $(function () {
         sidebar: ".js-news-affix-items",
         newsAffixSel: ".js-news-affix",
         setAffixClasses: {
-            lower: {
-                cssClass: '.news-affix__bar-inverse',
-                cssRule: 'height'
-            },
-            higher: {
-                cssClass: '.news-affix__bar',
-                cssRule: 'width'
-            }
+            cssClass: '.news-affix__bar',
+            cssRule: 'width'
         },
         onClickElements: '.js-affix-click',
         scrollAnimationSpeed: 750,
@@ -36,6 +30,6 @@ $(function () {
 * `headerClass` - header title of each chapter
 * `sidebar` - affix sidebar class name
 * `newsAffixSel` - main news affix selector
-* `setAffixClasses / lower & higher / cssClass` - CSS class for news affix currently active item. `lower` is used for affix under defined `breakpoint` option and `higher` for upper. `cssRule` is used should affix item calculate `width` or `height` on the current element (high = width, low = height).
+* `setAffixClasses / cssClass` - CSS class for news affix currently active item. `cssRule` is used should affix item calculate `width` or `height` on the current element. Previous version had `width` & `height`, new version has only `width`.
 * `onClickElement` - element which will trigger on scroll event
 * `scrollAnimationSpeed` - speed of animation
